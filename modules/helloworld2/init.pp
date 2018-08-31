@@ -1,6 +1,6 @@
 # test file
 
-class testfile {
+class helloworld2 {
 
   notify {'Hello World TWO!':}
 
