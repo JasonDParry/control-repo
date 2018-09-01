@@ -17,4 +17,11 @@ class helloworld2 {
     ensure => absent,
   }
  
+ 
+exec { 'set-timezone':
+  command   => 'Set-TimeZone -id \'W. Australia Standard Time\'',
+  unless    => 'if ((get-TimeZone).id -eq \'W. Australia Standard Time\') {exit 1}',
+  provider  => powershell,
+}
+ 
 }
