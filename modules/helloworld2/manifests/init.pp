@@ -5,7 +5,7 @@ class helloworld2 {
 
   notify {'Hello World TWO!':}
 
-  windowsfeature { 'NET-Framework-Core':
+  windowsfeature { 'Telnet-Client':
     ensure => present,
   }
 
