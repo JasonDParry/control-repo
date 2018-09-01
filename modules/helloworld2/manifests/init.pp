@@ -20,8 +20,9 @@ class helloworld2 {
  
 exec { 'set-timezone':
   command   => 'Set-TimeZone -id \'W. Australia Standard Time\'',
-  #unless    => 'if ((get-TimeZone).id -eq \'W. Australia Standard Time\') {exit 1}',
+  unless    => 'if ((get-TimeZone).id -neq \'W. Australia Standard Time\') {exit 0}',
   provider  => powershell,
+  logoutput => true,
 }
  
 }
