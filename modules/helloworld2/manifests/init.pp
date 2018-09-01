@@ -12,5 +12,9 @@ class helloworld2 {
   windowsfeature { 'tftp-client':
     ensure => absent,
   }
-
+ 
+   windowsfeature { 'Windows-Defender-Features':
+    ensure => absent,
+  }
+ 
 }
