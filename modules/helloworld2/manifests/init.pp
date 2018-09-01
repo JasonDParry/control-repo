@@ -10,7 +10,7 @@ class helloworld2 {
   }
 
   windowsfeature { 'tftp-client':
-    ensure => present,
+    ensure => absent,
   }
 
 }
